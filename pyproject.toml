@@ -9,6 +9,8 @@ authors = [
 requires-python = ">=3.14"
 dependencies = [
     "django>=6.1.1",
+    "django-cors-headers>=4.9.0",
+    "djangorestframework>=3.18.0",
 ]
 
 [project.scripts]
@@ -17,3 +19,9 @@ django-react = "django_react:main"
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13.0"]
 build-backend = "uv_build"
+
+[tool.ruff]
+select = ["E", "F", "I"]
+
+[tool.ruff.format]
+quote-style = "single"

@@ -8,9 +8,11 @@ authors = [
 ]
 requires-python = ">=3.14"
 dependencies = [
+    "coreapi>=2.3.3",
     "django>=6.1.1",
     "django-cors-headers>=4.9.0",
     "djangorestframework>=3.18.0",
+    "drf-spectacular>=0.30.0",
 ]
 
 [project.scripts]

@@ -1,5 +1,5 @@
 export function TasksPage() {
-    return {
+    return (
         <div>TasksPage</div>
-    }
+    )
 }

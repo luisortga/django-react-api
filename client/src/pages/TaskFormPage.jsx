@@ -1,5 +1,5 @@
-export function TasksFormPage() {
-    return {
+export function TaskFormPage() {
+    return (
         <div>TasksFormPage</div>
-    }
+    )
 }

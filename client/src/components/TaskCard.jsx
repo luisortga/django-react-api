@@ -1,7 +1,10 @@
-function TaskCard() {
+
+
+export function TaskCard({ task }) {
     return (
-        <div>TaskCard</div>
+        <div>
+                <h1>{task.title}</h1>
+                <p>{task.description}</p>
+        </div>
     )
 }
-
-export default TaskCard

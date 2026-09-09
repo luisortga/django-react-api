@@ -1,5 +1,5 @@
-<div>
-    <h1>
-        Tasks App
-    </h1>
-</div>
+export function Navigation() {
+    return (
+        <div>Navigation</div>
+    )
+}

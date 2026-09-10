@@ -8,7 +8,7 @@ export function TaskCard({ task }) {
         <div style={{background: "#028a6d"}} 
             
         onClick={() => {
-            navigate('')
+            navigate(`/tasks/${task.id}`)
         }}
         >
                 <h1>{task.title}</h1>

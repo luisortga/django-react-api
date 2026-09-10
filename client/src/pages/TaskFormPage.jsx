@@ -30,6 +30,10 @@ export function TaskFormPage() {
 
                 <button>Save</button>
             </form>
+
+            <button>
+                Delete
+            </button>
         </div>
     )
 }

@@ -33,9 +33,7 @@ export function TaskFormPage() {
                 <button>Save</button>
             </form>
 
-            <button>
-                Delete
-            </button>
+            {params.id && <button>Delete</button>}
         </div>
     )
 }

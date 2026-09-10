@@ -1,6 +1,6 @@
 import {useForm} from 'react-hook-form'
 import {createTask} from '../api/tasks.api'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, useParams} from 'react-router-dom'
 
 export function TaskFormPage() {
 
@@ -8,6 +8,8 @@ export function TaskFormPage() {
         errors
     }, } = useForm()
     const navigate = useNavigate()
+    const params = useParams()
+    console.log(params)
 
     const onSubmit = handleSubmit(async data => {
         await createTask(data)

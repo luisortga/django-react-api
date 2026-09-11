@@ -7,16 +7,19 @@ export function TaskFormPage() {
 
     const { register, handleSubmit, formState: {
         errors
-    }, } = useForm()
+    },
+        setValue
+    } = useForm()
     const navigate = useNavigate()
     const params = useParams()
 
     const onSubmit = handleSubmit(async data => {
         if (params.id) {
-            // updateTask()
+            await updateTask(params.id, data)
         } else {
             await createTask(data)
         }
+        
         navigate('/tasks')
     })
 
@@ -25,7 +28,8 @@ export function TaskFormPage() {
             if (params.id) {
             console.log('get data...')
             const res = await getTask(params.id)
-            console.log(res)
+            setValue('title', res.data.title)
+            setValue('description', res.data.description)
         }
     }
     loadTask()

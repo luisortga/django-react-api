@@ -33,13 +33,13 @@ export function TaskFormPage() {
                 <button>Save</button>
             </form>
 
-            {params.id && <button onClick={async () => {
+            {params.id && (<button onClick={async () => {
                 const accepted = window.confirm('are you sure?')
                 if (accepted) {
                     await deleteTask(params.id)
                     navigate('/tasks')
                 }
-            }}>Delete</button>}
+            }}>Delete</button>)}
         </div>
     )
 }

@@ -2,6 +2,7 @@ import {useEffect} from 'react'
 import {useForm} from 'react-hook-form'
 import {createTask, deleteTask, updateTask, getTask} from '../api/tasks.api'
 import {useNavigate, useParams} from 'react-router-dom'
+import {toast} from 'react-hot-toast'
 
 export function TaskFormPage() {
 
@@ -18,6 +19,13 @@ export function TaskFormPage() {
             await updateTask(params.id, data)
         } else {
             await createTask(data)
+            toast.success('task successful', {
+                position: 'bottom-right',
+                style : {
+                    background: '#101010',
+                    color: '#fff'
+                }
+            })
         }
         
         navigate('/tasks')
@@ -33,7 +41,7 @@ export function TaskFormPage() {
         }
     }
     loadTask()
-    }, [])
+    }, [params.id, setValue])
 
     return (
         <div>

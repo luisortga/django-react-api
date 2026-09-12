@@ -4,7 +4,7 @@ This is a simple Django React CRUD application.
 Environment variables
 VITE_BACKEND_URL, this is neccessary in production, it should be the url of the backend server
 
-### las tecnologías utilizadas
+### Technologies used
 
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django)
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react)

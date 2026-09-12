@@ -17,6 +17,13 @@ export function TaskFormPage() {
     const onSubmit = handleSubmit(async data => {
         if (params.id) {
             await updateTask(params.id, data)
+            toast.success('task updated', {
+                position: 'bottom-right',
+                style : {
+                    background: '#101010',
+                    color: '#fff'
+                }
+            })
         } else {
             await createTask(data)
             toast.success('task successful', {
@@ -64,6 +71,13 @@ export function TaskFormPage() {
                 const accepted = window.confirm('are you sure?')
                 if (accepted) {
                     await deleteTask(params.id)
+                        toast.success('deleted task', {
+                        position: 'bottom-right',
+                        style : {
+                        background: '#101010',
+                        color: '#fff'
+                    }
+                    })
                     navigate('/tasks')
                 }
             }}>Delete</button>)}
